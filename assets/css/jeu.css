@@ -1,0 +1,18 @@
+
+ #cadreDuJeu{
+    background-image: url('assets/images/decor.jpg');
+    background-repeat: repeat-x;
+    }        
+ 
+.parcheminInvisible{
+    position: absolute;
+    margin-top:10px ;
+    margin-left: 20px;
+    display: none;
+    }
+.effetParchemin{
+    position: absolute;
+    margin-top:100px ;
+    margin-left: 700px;
+    display: block;
+    }
