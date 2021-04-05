@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="fr">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+          body {
+            background-color: rgb(77, 109, 72);
+          }
+          #decor {
+            background-image: url("assets/images/decor.jpg");
+            background-repeat: repeat-x;
+            width: 50000px;
+            height: 800px;
+            margin-top: 0px;
+            margin-left: 0px;
+            position: absolute;
+          }
+
+          .parcheminInvisible {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 20px;
+            display: none;
+          }
+          .effetParchemin {
+            position: absolute;
+            margin-top: 120px;
+            margin-left: 547px;
+            display: block;
+          }
+        </style>
+        <title>jeu de mélanie vandervaeren</title>
+      </head>
+
+      <body>
+        <div
+          id="cadreDuJeu"
+          style="
+            position: absolute;
+            width: 1500px;
+            height: 800px;
+            overflow: hidden;
+            border: 8px solid rgb(197, 234, 32);
+          "
+        >
+          <div id="decor" style="position: absolute; margin-left: 0px">
+            <div id="divFeu" style="position: absolute; overflow: hidden">
+              <img
+                id="feuSprite"
+                src="assets/images/feu.png"
+                alt="feu"
+                style="position: relative"
+              />
+            </div>
+
+            <div id="divPero" style="position: absolute; overflow: hidden">
+              <img
+                id="peroquet"
+                src="assets/images/peroquet.png"
+                alt="peroquet"
+                style="position: relative"
+              />
+            </div>
+
+            <div id="pommeA" style="position: absolute">
+              <img src="assets/images/pomme.png" alt="pomme a " />
+            </div>
+
+            <div id="pommeB" style="position: absolute">
+              <img src="assets/images/pomme.png" alt="pomme b " />
+            </div>
+
+            <div id="pommeC" style="position: absolute">
+              <img src="assets/images/pomme.png" alt="pomme c " />
+            </div>
+            <div id="divDodo" style="position: absolute; overflow: hidden">
+              <img
+                id="dodo"
+                src="assets/images/dodo.png"
+                alt="dodo la saumure"
+                style="position: relative"
+              />
+            </div>
+
+            <div id="champiBon" style="position: absolute">
+              <img
+                src="assets/images/champibon.png"
+                alt="champignon comestible"
+              />
+            </div>
+            <div style="position: absolute; display: none" id="etoile">
+              <img src="assets/images/etoile.png" alt="etoile" />
+            </div>
+            <div id="champiMauvais" style="position: absolute">
+              <img
+                src="assets/images/champimauvais.png"
+                alt="champignon mortel"
+              />
+            </div>
+            <div id="divHero" style="position: absolute; overflow: hidden">
+              <img
+                id="hero"
+                src="assets/images/herosversion2.png"
+                alt="heros"
+                style="position: relative"
+              />
+            </div>
+            <div
+              id="divExplosion"
+              style="position: absolute; overflow: hidden; display: none"
+            >
+              <img
+                src="assets/images/explose.png"
+                alt="explosion"
+                id="explosion"
+                style="position: relative"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="divCoffres" style="position: absolute">
+          <img id="coffre1" src="assets/images/coffreferme.png" alt="coffre1" />
+          <img id="coffre2" src="assets/images/coffreferme.png" alt="coffre2" />
+          <img id="coffre3" src="assets/images/coffreferme.png" alt="coffre3" />
+        </div>
+        <div
+          id="clef1"
+          style="
+            position: absolute;
+            margin-left: 800px;
+            margin-top: 580px;
+            display: none;
+          "
+        >
+          <img src="assets/images/clef.png" alt="clef" />
+        </div>
+        <div
+          id="clef2"
+          style="
+            position: absolute;
+            margin-left: 800px;
+            margin-top: 580px;
+            display: none;
+          "
+        >
+          <img src="assets/images/clef.png" alt="clef" />
+        </div>
+        <div
+          id="clef3"
+          style="
+            position: absolute;
+            margin-left: 800px;
+            margin-top: 580px;
+            display: none;
+          "
+        >
+          <img src="assets/images/clef.png" alt="clef" />
+        </div>
+        <div id="divMessages" style="position: absolute">
+          <div id="msg1" class="parcheminInvisible" style="position: absolute">
+            <img src="assets/images/parchemin1.png" alt="parchemin1" />
+          </div>
+          <div id="msg2" class="parcheminInvisible" style="position: absolute">
+            <img src="assets/images/parchemin2.png" alt="parchemin2" />
+          </div>
+          <div id="msg3" class="parcheminInvisible" style="position: absolute">
+            <img src="assets/images/parchemin3.png" alt="parchemin3" />
+          </div>
+          <div id="msg4" class="parcheminInvisible" style="position: absolute">
+            <img src="assets/images/parchemin4.png" alt="parchemin4" />
+          </div>
+        </div>
+        <div
+          id="play"
+          style="
+            position: absolute;
+            display: none;
+            margin-top: 610px;
+            margin-left: 760px;
+          "
+        >
+          <img src="assets/images/play.png" alt="play" />
+        </div>
+        <div
+          id="divMort"
+          style="
+            position: absolute;
+            overflow: hidden;
+            display: none;
+            margin-top: 240px;
+            margin-left: 611px;
+          "
+        >
+          <img id="mort" src="assets/images/mort.png" alt="tete de mort" />
+        </div>
+        <div
+          id="divPlayAgain"
+          style="
+            position: fixed;
+            display: none;
+            margin-top: 110px;
+            margin-left: 733px;
+          "
+        >
+          <img src="assets/images/playAgain.png" alt="bouton play again" />
+        </div>
+        <div
+          id="divRejouer"
+          style="
+            position: fixed;
+            display: none;
+            margin-top: 0px;
+            margin-left: 624px;
+          "
+        >
+          <img src="assets/images/REJOUER.png" alt="rejouer" />
+        </div>
+        <div
+          id="divPanneau"
+          style="position: fixed; margin-top: 510px; margin-left: 0px"
+        >
+          <img
+            id="panneau"
+            src="assets/images/score0.png"
+            alt="panneau score"
+          />
+        </div>
+        <div
+          id="menu"
+          style="position: absolute; margin-top: 10px; margin-left: 80%"
+        >
+          <img src="assets/images/menu.png" alt="panneau menu" />
+        </div>
+        <div
+          id="itemsMenu"
+          style="
+            position: absolute;
+            margin-top: 211px;
+            margin-left: 83%;
+            display: none;
+          "
+        >
+          <a
+            href="assets/images/cvmelanievandervaeren.pdf"
+            download
+            target="_blank"
+          >
+            <img src="assets/images/menuCv.png" alt="download le cv" />
+          </a>
+          <a href="reglesDuJeu.html"
+            ><img src="assets/images/menuRegles.png" alt="règles du jeu"
+          /></a>
+          <a href="index.html"
+            ><img src="assets/images/menuJouer.png" alt="jouer"
+          /></a>
+        </div>
+
+        <script src="assets/js/menu.js"></script>
+        <script src="assets/js/feuBrule.js"></script>
+        <script src="assets/js/peroquetVole.js"></script>
+        <script src="assets/js/herosRun.js"></script>
+        <script src="assets/js/herosMeurt.js"></script>
+        <script src="assets/js/sauteLoin.js"></script>
+        <script src="assets/js/dodo.js"></script>
+        <script src="assets/js/champignonBon.js"></script>
+        <script src="assets/js/champignonMortel.js"></script>
+        <script src="assets/js/herosSautePomme.js"></script>
+        <script src="assets/js/score.js"></script>
+
+        <script>
+          setInterval(() => {
+            gestionDuScore(); //
+          }, 10);
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
