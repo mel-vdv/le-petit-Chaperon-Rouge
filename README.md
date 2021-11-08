@@ -1,4 +1,3 @@
 # jeuAtelierFrontend
 
-video de description du jeu : https://youtu.be/-X0RVkyx5Ao
-
+video de description du jeu : *https://youtu.be/bn5pk96OtiM*
