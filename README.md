@@ -1,4 +1,4 @@
 # jeuAtelierFrontend
 
-video de description du jeu : https://reccloud.com/fr/u/g106fp5
+video de description du jeu : https://youtu.be/-X0RVkyx5Ao
 
